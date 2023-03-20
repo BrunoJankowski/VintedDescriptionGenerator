@@ -28,7 +28,7 @@ def itemGenerator():
     flag = True
     item_num = os.listdir("items")
     print(len(item_num)) 
-    i = item_num ##what number of the files in the folder 
+    i = len(item_num) ##what number of the files in the folder 
     while flag == True:
         itemki = "item{}.txt".format(i)
         file_path = os.path.join("items", itemki)
@@ -38,5 +38,6 @@ def itemGenerator():
             i += 1
             ctn = input('continue? y/n: ') 
             if ctn == 'n':
-                flag = False
+                flag = False ##interupt
+
 itemGenerator()
