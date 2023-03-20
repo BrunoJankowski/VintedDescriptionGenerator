@@ -24,13 +24,11 @@ def opis():
         opis_all = str(nazwa_l+rozmiar_l+stan_l+ "!Cena do negocjacji! \nPo więcej zdjęć lub informacji pisz (:\n" + tags)
         return opis_all
 
-opis = opis()
-print(opis)
-
-
 def itemGenerator():
     flag = True
-    i = 7
+    item_num = os.listdir("items")
+    print(len(item_num)) 
+    i = item_num ##what number of the files in the folder 
     while flag == True:
         itemki = "item{}.txt".format(i)
         file_path = os.path.join("items", itemki)
@@ -41,4 +39,4 @@ def itemGenerator():
             ctn = input('continue? y/n: ') 
             if ctn == 'n':
                 flag = False
-             
+itemGenerator()
