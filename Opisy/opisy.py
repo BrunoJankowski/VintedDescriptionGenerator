@@ -1,13 +1,16 @@
 import sys, os
 def tagi():
-     tagi_l = []
-     tagi = input("Tagi: ")
-     tagi_temp = tagi.split()
-     for tag in tagi_temp:
-          tag = "#"+str(tag)
-          tagi_l.append(tag)
-     tagi_s = ' '.join(tagi_l)
-     return tagi_s
+    tagi_l = []
+    tagi = input("Tagi: ")
+    if tagi != '':
+        tagi_temp = tagi.split()
+        for tag in tagi_temp:
+            tag = "#"+str(tag)
+            tagi_l.append(tag)
+        tagi_s = ' '.join(tagi_l)
+    else:
+        tagi_s = '#vintage #y2k #drip #moda #fashion'
+    return tagi_s
 
 
 def opis():
